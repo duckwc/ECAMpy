@@ -1,0 +1,61 @@
+<!doctype html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+	$("document").ready(function(){
+		$("#iqks").click(function(){
+			$.get( "http://127.0.0.1:10280/get_properties?name=d302_monitor", function( data ) {
+				//$( ".result" ).html( data );
+				alert( "Load was performed." );
+			});
+		});
+		$("#iyfj").click(function(){
+			$.get( "http://127.0.0.1:10280/turn_on", function( data ) {
+				//$( ".result" ).html( data );
+				alert( "Load was performed." );
+			});
+		});
+		$("#iqkw").click(function(){
+			$.get( "http://127.0.0.1:10280/get_properties?name=d270_serialnumber", function( data ) {
+				//$( ".result" ).html( data );
+				alert( "Load was performed." );
+			});
+		});
+		$("#iqkx").click(function(){
+			$.get( "http://127.0.0.1:10280/get_properties?name=d260_beansystem_sync_par", function( data ) {
+				//$( ".result" ).html( data );
+				alert( "Load was performed." );
+			});
+		});
+	});  
+	</script>
+</head> 
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+	<body id="ia7p">
+		<div class="gjs-row" id="id4h">
+			<div class="gjs-cell" id="if7a">
+				<button type="button" id="iyfj">Turn On</button>
+				<button type="button" id="iqks">Get Status</button>
+				<button type="button" id="iqkx">Get Bean info</button>
+				<button type="button" id="iqkw">Get Serial</button>
+			</div>
+			<div class="gjs-cell" id="ic8j">
+			<div id="i85h">
+			  <span id="iujhu">
+				<iframe
+					id="inlineFrameExample"
+					title="Inline Frame Example"
+					width="800"
+					height="200"
+					src="http://127.0.0.1:10280/status">
+				</iframe></span></div></div><div class="gjs-cell" id="itgf">
+			</div>
+		</div>
+	</body>
+</body>
+</html>
