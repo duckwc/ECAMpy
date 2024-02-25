@@ -339,7 +339,7 @@ def run():
     class PoolHTTPServer(PoolMixIn, http.server.HTTPServer):
         pool = ThreadPoolExecutor(max_workers=40)
     server = PoolHTTPServer(('0.0.0.0', PORT), Handler)
-    print("connect to http://127.0.0.1:"+str(PORT))
+    print("connect to http://127.0.0.1:"+str(PORT)+"/index.html")
     server.serve_forever()
 
 ## get saved token and refresh it:
