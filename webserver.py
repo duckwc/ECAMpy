@@ -166,7 +166,9 @@ def get_lankey(access_token):
     ## get LAN key used for encrypting local trafic
     api_url = "https://ads-eu.aylanetworks.com/apiv1/devices/"+DSN+"/connection_config.json"
     headers =  {"Authorization":"auth_token "+access_token}
-    response = requests.get(api_url, headers=headers).json()
+    data = requests.get(api_url, headers=headers)
+    print("lankey:",data.headers,data.text)
+    response = data.json()
     local_key_id = response['local_key_id']
     local_key = response['local_key']
     # print("lan key:", local_key_id,local_key)
